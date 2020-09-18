@@ -1,0 +1,24 @@
+---
+title: "Map_with_Leaflet"
+author: "Apoorv"
+date: "19/09/2020"
+output: 
+  html_document: 
+    keep_md: true 
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+####Map created in R Studio using leaflet and annotations with R markdown
+#####1. My city
+
+
+```{r, leaflet, echo=TRUE}
+library(leaflet)
+my_map <- leaflet() %>% addTiles() 
+my_map <- my_map %>% addMarkers(lat=26.8467, lng= 80.9462, popup="Lucknow city, INDIA")
+my_map
+```
+
